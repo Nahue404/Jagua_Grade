@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <Windows.h>
 
-//Definición de la función limpiar
+//DefiniciÃ³n de la funciÃ³n limpiar
 //Identifica que sistema operativo utiliza para borrar la consola
 
 void limpiar() {
@@ -19,7 +19,7 @@ void color(){
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 }
-// Definición de la función logo
+// DefiniciÃ³n de la funciÃ³n logo
 void logo() {
     //CAMBIA EL COLOR A BLANCO
 	//HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -83,7 +83,7 @@ void logo() {
 	printf("\n");
 	printf("\n");
 	printf("\n");
-	printf("---¡La clave hacia el rendimiento estudiantil, gestiona y mejora tu desempeño académico con Jagua Grade!---");
+	printf("---Â¡La clave hacia el rendimiento estudiantil, gestiona y mejora tu desempeÃ±o acadÃ©mico con Jagua Grade!---");
 	printf("\n");
 	printf("\n");
 	printf("==================================================================================================================");
@@ -94,14 +94,14 @@ void logo() {
 }
 
 int main() {
-    setlocale(LC_ALL, ""); // Configurar localización para permitir imprimir caracteres acentuados
+    setlocale(LC_ALL, ""); // Configurar localizaciÃ³n para permitir imprimir caracteres acentuados
 	
 //---------------------------------------------------------------------------------------------------------------------------------------
 //---------------------Variables-de-entrada----------------------------------------------------------------------------------------------
 
 	int cantidad_materias;							     //Cantidad de materias que lleva el alumno
 	int beneficios;								 		//Si tiene beneficio
-	int tipo_evalua;								   //Cómo deseas cargar sus notas
+	int tipo_evalua;								   //CÃ³mo deseas cargar sus notas
 	int parciales;								      //(1) Si esta hasta primera parcial o segunda o final
 	int C_M, B_B, T_E, B_P;							 //Banderas para poder cargar el valor de nuevo de las operaciones si cargo mal 
 	
@@ -129,7 +129,7 @@ int main() {
 		logo();
 		
 		printf("					=================================\n");
-        printf("					          MENÚ PRINCIPAL         \n");
+        printf("					          MENÃš PRINCIPAL         \n");
         printf("					=================================\n");
         printf("\n\n");
         
@@ -144,9 +144,9 @@ int main() {
 	    
 		//Si carga mal los datos otra vez el bobo
 		if(cantidad_materias < 1 || cantidad_materias > 11){
-			printf("Error: La cantidad de materias ingresada no es válida. Por favor, ingrese un valor entre 1 y 11\n");
+			printf("Error: La cantidad de materias ingresada no es vÃ¡lida. Por favor, ingrese un valor entre 1 y 11\n");
 			//Le notificamos que vuelva a ingresar
-			printf("Atención:¡Por favor, vuelva a ingresar su cantidad de materias!\n");
+			printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su cantidad de materias!\n");
 	
 		    C_M = 1;
 			//Si se pasa de menso
@@ -155,9 +155,9 @@ int main() {
 				scanf("%d", &cantidad_materias);
 			                       		
 				if(cantidad_materias < 1 || cantidad_materias > 11){
-					printf("Error: La cantidad de materias ingresada no es válida. Por favor, ingrese un valor entre 1 y 12\n");
+					printf("Error: La cantidad de materias ingresada no es vÃ¡lida. Por favor, ingrese un valor entre 1 y 12\n");
 					//Le notificamos que vuelva a ingresar
-					printf("Atención:¡Por favor, vuelva a ingresar su cantidad de materias!\n");
+					printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su cantidad de materias!\n");
 				}
 			
 				else{
@@ -168,33 +168,33 @@ int main() {
 		 
 		printf("\n\n\n");
 		
-	    printf("Tienes algún beneficio;\n");
+	    printf("Tienes algÃºn beneficio;\n");
 	    printf("	(1) Ninguno\n");
 	    printf("	(2) Beca completa 100%%\n");
 	    printf("	(3) Media Beca 50%%\n");
-	    printf("Ingrese su selección: ");
+	    printf("Ingrese su selecciÃ³n: ");
 		scanf("%d", &beneficios);
 		
 		//Si carga mal los datos otra vez el bobo
 		if(beneficios < 1 || beneficios > 3){
-			printf("Error: La elección de beneficios no es válida. Por favor, ingrese un valor entre 1 y 3\n");
+			printf("Error: La elecciÃ³n de beneficios no es vÃ¡lida. Por favor, ingrese un valor entre 1 y 3\n");
 			//Le notificamos que vuelva a ingresar
-			printf("Atención:¡Por favor, vuelva a ingresar!\n");
+			printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar!\n");
 	
 		    B_B = 1;
 			//Si se pasa de menso
 			while (B_B == 1){
-		    	printf("Tienes algún beneficio;\n");
+		    	printf("Tienes algÃºn beneficio;\n");
 	    		printf("	(1) Ninguno\n");
 	    		printf("	(2) Beca completa 100%%\n");
 	    		printf("	(3) Media Beca 50%%\n");
-	    		printf("Ingrese su selección: ");
+	    		printf("Ingrese su selecciÃ³n: ");
 				scanf("%d", &beneficios);
 			                       		
 				if(beneficios < 1 || beneficios > 3){
-					printf("Error: La elección de beneficios no es válida. Por favor, ingrese un valor entre 1 y 3\n");
+					printf("Error: La elecciÃ³n de beneficios no es vÃ¡lida. Por favor, ingrese un valor entre 1 y 3\n");
 					//Le notificamos que vuelva a ingresar
-					printf("Atención:¡Por favor, vuelva a ingresar!\n");
+					printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar!\n");
 				}
 			
 				else{
@@ -205,31 +205,31 @@ int main() {
 	
 		printf("\n\n\n");
 		
-		printf("¿Cómo deseas cargar tus notas?\n");
+		printf("Â¿CÃ³mo deseas cargar tus notas?\n");
 		printf("	(1)	Cargar notas de proceso incluyendo (EP1,EP2 Y EF) por materia\n");
 		printf("	(2)	Cargar nota final por materia\n");
-		printf("Ingrese su selección: ");
+		printf("Ingrese su selecciÃ³n: ");
 		scanf("%d", &tipo_evalua);
 		
 		//Si carga mal los datos otra vez el bobo
 		if(tipo_evalua < 1 || tipo_evalua > 2){
-			printf("Error: La elección de como cargar tus notas no es válida. Por favor, ingrese un valor entre 1 y 2\n");
+			printf("Error: La elecciÃ³n de como cargar tus notas no es vÃ¡lida. Por favor, ingrese un valor entre 1 y 2\n");
 			//Le notificamos que vuelva a ingresar
-			printf("Atención:¡Por favor, vuelva a ingresar!\n");
+			printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar!\n");
 	
 		    T_E = 1;
 			//Si se pasa de menso
 			while (T_E == 1){
-		    	printf("¿Cómo deseas cargar tus notas?\n");
+		    	printf("Â¿CÃ³mo deseas cargar tus notas?\n");
 				printf("	(1)	Cargar notas de proceso incluyendo (EP1,EP2 Y EF) por materia\n");
 				printf("	(2)	Cargar nota final por materia\n");
-				printf("Ingrese su selección: ");
+				printf("Ingrese su selecciÃ³n: ");
 				scanf("%d", &tipo_evalua);
 			                       		
 				if(tipo_evalua < 1 || tipo_evalua > 2){
-					printf("Error: La elección de como cargar tus notas no es válida. Por favor, ingrese un valor entre 1 y 2\n");
+					printf("Error: La elecciÃ³n de como cargar tus notas no es vÃ¡lida. Por favor, ingrese un valor entre 1 y 2\n");
 					//Le notificamos que vuelva a ingresar
-					printf("Atención:¡Por favor, vuelva a ingresar!\n");
+					printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar!\n");
 				}
 			
 				else{
@@ -239,7 +239,7 @@ int main() {
 		}
 	
 		
-		//Limpiamos la consola y pasamo a su elección
+		//Limpiamos la consola y pasamo a su elecciÃ³n
 		limpiar();
 //---------------------------------------------------LOGICA--------PRINCIPAL-------------------------------------------------------------
 		
@@ -256,33 +256,33 @@ int main() {
         	
 			color();
 	    	
-			printf("En qué etapa académica te encuentras actualmente;\n");
+			printf("En quÃ© etapa acadÃ©mica te encuentras actualmente;\n");
 		    printf("	(1) Examen Parcial 1\n");
 		    printf("	(2) Examen Parcial 2\n");
 		    printf("	(3) Examen Final\n");
-		    printf("Ingrese su selección: ");
+		    printf("Ingrese su selecciÃ³n: ");
 		    scanf("%d", &parciales);
 		    
 			//Si carga mal los datos otra vez el bobo
 			if(parciales < 1 || parciales > 3){
-				printf("Error: La elección de su etapa académica no es válida. Por favor, ingrese un valor entre 1 y 3\n");
+				printf("Error: La elecciÃ³n de su etapa acadÃ©mica no es vÃ¡lida. Por favor, ingrese un valor entre 1 y 3\n");
 				//Le notificamos que vuelva a ingresar
-				printf("Atención:¡Por favor, vuelva a ingresar!\n");
+				printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar!\n");
 		
 			    B_P = 1;
 				//Si se pasa de menso
 				while (B_P == 1){
-			    	printf("En qué etapa académica te encuentras actualmente;\n");
+			    	printf("En quÃ© etapa acadÃ©mica te encuentras actualmente;\n");
 				    printf("	(1) Examen Parcial 1\n");
 				    printf("	(2) Examen Parcial 2\n");
 				    printf("	(3) Examen Final\n");
-				    printf("Ingrese su selección: ");
+				    printf("Ingrese su selecciÃ³n: ");
 				    scanf("%d", &parciales);
 				                       		
 					if(parciales < 1 || parciales > 3){
-						printf("Error: La elección de su etapa académica no es válida. Por favor, ingrese un valor entre 1 y 3\n");
+						printf("Error: La elecciÃ³n de su etapa acadÃ©mica no es vÃ¡lida. Por favor, ingrese un valor entre 1 y 3\n");
 						//Le notificamos que vuelva a ingresar
-						printf("Atención:¡Por favor, vuelva a ingresar!\n");
+						printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar!\n");
 					}
 				
 					else{
@@ -303,7 +303,7 @@ int main() {
 		            	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 						SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN);
 						
-		                printf("\nMateria Nº %d:\n", j);
+		                printf("\nMateria NÂº %d:\n", j);
 		                
 						//Se cambia al predeterminado del sistema...
 						SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
@@ -316,11 +316,11 @@ int main() {
 		                    
 		                    //Si carga mal los datos de proceso
 							if(puntos_procesos<0 || puntos_procesos>3){
-								printf("Error: El puntaje del Proceso no es válido. Por favor, ingrese un valor en un rango del 1 al 3\n");
+								printf("Error: El puntaje del Proceso no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 3\n");
 								//Disminuimos el contador para volver a cargar
 								i= i-1;
 								//Le notificamos que vuelva a ingresar
-								printf("Atención:¡Por favor, vuelva a ingresar su puntaje de Proceso!\n");
+								printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje de Proceso!\n");
 							}
 							//Si carga bien se aumenta su total de puntos
 							else{
@@ -336,9 +336,9 @@ int main() {
 		                        
 		                        //Si carga mal los datos otra vez el bobo
 								if(puntos_procesos<0 || puntos_procesos>13){
-									printf("Error: El puntaje del Examen Parcial 1 no es válido. Por favor, ingrese un valor en un rango del 1 al 13\n");
+									printf("Error: El puntaje del Examen Parcial 1 no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 13\n");
 									//Le notificamos que vuelva a ingresar
-									printf("Atención:¡Por favor, vuelva a ingresar su puntaje de Proceso!\n");
+									printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje de Proceso!\n");
 									
 									//Por si se equivoca pueda cargar su nota de nuevo las veces que este mal, da un true para entrar al ciclo
 									EP = 1;
@@ -349,9 +349,9 @@ int main() {
 		                        		
 		                        		//Si se pasa de menso
 										if(puntos_procesos<0 || puntos_procesos>13){
-											printf("Error: El puntaje del Examen Parcial 1 no es válido. Por favor, ingrese un valor en un rango del 1 al 13\n");
+											printf("Error: El puntaje del Examen Parcial 1 no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 13\n");
 											//Le notificamos que vuelva a ingresar
-											printf("Atención:¡Por favor, vuelva a ingresar su puntaje de Proceso!\n");
+											printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje de Proceso!\n");
 										}
 										else{
 											//Sale del ciclo dando un false a la bandera
@@ -372,7 +372,7 @@ int main() {
 		                
 		                if (total_puntos < 30) {
 				            puntos_faltantes = 30 - total_puntos;
-				            printf("\nTe faltan %d puntos para habilitar el Examen Final de la Materia Nº %d!\n", puntos_faltantes, cantidad_materias-1);
+				            printf("\nTe faltan %d puntos para habilitar el Examen Final de la Materia NÂº %d!\n", puntos_faltantes, cantidad_materias-1);
 				        }
 		                printf("\n\n\n");
 		                
@@ -391,7 +391,7 @@ int main() {
 		            	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 						SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN);
 						
-		                printf("\nMateria Nº %d:\n", j);
+		                printf("\nMateria NÂº %d:\n", j);
 		                
 		                //Se cambia al predeterminado del sistema...
 						SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
@@ -402,11 +402,11 @@ int main() {
 		                
 		                    //Si carga mal los datos de proceso
 							if(puntos_procesos<0 || puntos_procesos>3){
-								printf("Error: El puntaje del Proceso no es válido. Por favor, ingrese un valor en un rango del 1 al 3\n");
+								printf("Error: El puntaje del Proceso no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 3\n");
 								//Disminuimos el contador para volver a cargar
 								i= i-1;
 								//Le notificamos que vuelva a ingresar
-								printf("Atención:¡Por favor, vuelva a ingresar su puntaje de Proceso!\n");
+								printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje de Proceso!\n");
 							}
 							
 							//Si carga bien se aumenta su total de puntos
@@ -429,9 +429,9 @@ int main() {
 		                        
 		                        //Si carga mal los datos otra vez el bobo
 								if(puntos_procesos<0 || puntos_procesos>13){
-									printf("Error: El puntaje del Examen Parcial 1 no es válido. Por favor, ingrese un valor en un rango del 1 al 13\n");
+									printf("Error: El puntaje del Examen Parcial 1 no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 13\n");
 									//Le notificamos que vuelva a ingresar
-									printf("Atención:¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 1!\n");
+									printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 1!\n");
 									EP1 = 1;
 									//Si se pasa de menso
 									while (EP1 == 1){
@@ -440,9 +440,9 @@ int main() {
 		                        		
 		                        		//Si se pasa de menso
 										if (puntos_procesos<0 || puntos_procesos>13){
-											printf("Error: El puntaje del Examen Parcial 1 no es válido. Por favor, ingrese un valor en un rango del 1 al 13\n");
+											printf("Error: El puntaje del Examen Parcial 1 no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 13\n");
 											//Le notificamos que vuelva a ingresar
-											printf("Atención:¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 1!\n");
+											printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 1!\n");
 										}
 										else{
 											//Sale del ciclo dando un false a la bandera
@@ -464,9 +464,9 @@ int main() {
 
 								 //Si carga mal los datos otra vez el bobo
 								if(puntos_procesos<0 || puntos_procesos>13){
-									printf("Error: El puntaje del Examen Parcial 2 no es válido. Por favor, ingrese un valor en un rango del 1 al 13\n");
+									printf("Error: El puntaje del Examen Parcial 2 no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 13\n");
 									//Le notificamos que vuelva a ingresar
-									printf("Atención:¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 2!\n");
+									printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 2!\n");
 									EP2 = 1;
 									//Si se pasa de menso
 									while(EP2 == 1){
@@ -475,9 +475,9 @@ int main() {
 		                        		
 		                        		//Si se pasa de menso
 										if(puntos_procesos<0 || puntos_procesos>13){
-											printf("Error: El puntaje del Examen Parcial 2 no es válido. Por favor, ingrese un valor en un rango del 1 al 13\n");
+											printf("Error: El puntaje del Examen Parcial 2 no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 13\n");
 											//Le notificamos que vuelva a ingresar
-											printf("Atención:¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 2!\n");
+											printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 2!\n");
 										}
 										else{
 											//Sale del ciclo dando un false a la bandera
@@ -500,7 +500,7 @@ int main() {
 		                
 		                if (total_puntos < 30) {
 				            puntos_faltantes = 30 - total_puntos;
-				            printf("\nTe faltan %d puntos para habilitar el Examen Final de la Materia Nº %d!\n", puntos_faltantes, cantidad_materias-1);
+				            printf("\nTe faltan %d puntos para habilitar el Examen Final de la Materia NÂº %d!\n", puntos_faltantes, cantidad_materias-1);
 				        }
 				        
 				        printf("\n\n\n");
@@ -516,7 +516,7 @@ int main() {
 		            	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 						SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN);
 						
-		                printf("\nMateria Nº %d:\n", j);
+		                printf("\nMateria NÂº %d:\n", j);
 		                
 		                //Se cambia al predeterminado del sistema...
 						SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
@@ -527,12 +527,12 @@ int main() {
 
 							//Si carga mal los datos de proceso
 							if(puntos_procesos<0 || puntos_procesos>3){
-								printf("Error: El puntaje del Proceso no es válido. Por favor, ingrese un valor en un rango del 1 al 3\n");
+								printf("Error: El puntaje del Proceso no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 3\n");
 								//Disminuimos el contador para volver a cargar
 								i= i-1;
 								
 								//Le notificamos que vuelva a ingresar
-								printf("Atención:¡Por favor, vuelva a ingresar su puntaje de Proceso!\n");
+								printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje de Proceso!\n");
 							}
 							//Si carga bien se aumenta su total de puntos
 							else{
@@ -550,9 +550,9 @@ int main() {
 		                        
 		                        //Si carga mal los datos otra vez el bobo
 								if(puntos_procesos<0 || puntos_procesos>13){
-									printf("Error: El puntaje del Examen Parcial 1 no es válido. Por favor, ingrese un valor en un rango del 1 al 13\n");
+									printf("Error: El puntaje del Examen Parcial 1 no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 13\n");
 									//Le notificamos que vuelva a ingresar
-									printf("Atención:¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 1!\n");
+									printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 1!\n");
 									EP1 = 1;
 									//Si se pasa de menso
 									while (EP1 == 1){
@@ -561,9 +561,9 @@ int main() {
 		                        		
 		                        		//Si se pasa de menso
 										if (puntos_procesos<0 || puntos_procesos>13){
-											printf("Error: El puntaje del Examen Parcial 1 no es válido. Por favor, ingrese un valor en un rango del 1 al 13\n");
+											printf("Error: El puntaje del Examen Parcial 1 no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 13\n");
 											//Le notificamos que vuelva a ingresar
-											printf("Atención:¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 1!\n");
+											printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 1!\n");
 										}
 										else{
 											//Sale del ciclo dando un false a la bandera
@@ -586,9 +586,9 @@ int main() {
 
 								//Si carga mal los datos otra vez el bobo
 								if(puntos_procesos<0 || puntos_procesos>13){
-									printf("Error: El puntaje del Examen Parcial 2 no es válido. Por favor, ingrese un valor en un rango del 1 al 13\n");
+									printf("Error: El puntaje del Examen Parcial 2 no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 13\n");
 									//Le notificamos que vuelva a ingresar
-									printf("Atención:¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 2!\n");
+									printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 2!\n");
 									EP2 = 1;
 									//Si se pasa de menso
 									while(EP2 == 1){
@@ -597,9 +597,9 @@ int main() {
 		                        		
 		                        		//Si se pasa de menso
 										if(puntos_procesos<0 || puntos_procesos>13){
-											printf("Error: El puntaje del Examen Parcial 2 no es válido. Por favor, ingrese un valor en un rango del 1 al 13\n");
+											printf("Error: El puntaje del Examen Parcial 2 no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 13\n");
 											//Le notificamos que vuelva a ingresar
-											printf("Atención:¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 2!\n");
+											printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje del Examen Parcial 2!\n");
 										}
 										else{
 											//Sale del ciclo dando un false a la bandera
@@ -619,9 +619,9 @@ int main() {
 
 								//Si carga mal los datos otra vez el burro
 								if (puntos_procesos<0 || puntos_procesos>20 &&  EP3 == 0){
-									printf("Error: El puntaje del Proceso Final no es válido. Por favor, ingrese un valor en un rango del 1 al 20\n");
+									printf("Error: El puntaje del Proceso Final no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 20\n");
 									//Le notificamos que vuelva a ingresar
-									printf("Atención:¡Por favor, vuelva a ingresar su puntaje del Proceso Final!\n");
+									printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje del Proceso Final!\n");
 									PF = 1;
 									//Ya es el colmo
 									while (PF == 1){
@@ -629,9 +629,9 @@ int main() {
 		                        		scanf("%d", &puntos_procesos);
 		                        		
 										if (puntos_procesos<0 || puntos_procesos>13){
-											printf("Error: El puntaje del Proceso Final no es válido. Por favor, ingrese un valor en un rango del 1 al 20\n");
+											printf("Error: El puntaje del Proceso Final no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 20\n");
 											//Le notificamos que vuelva a ingresar
-											printf("Atención:¡Por favor, vuelva a ingresar su puntaje del Proceso Final!\n");
+											printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje del Proceso Final!\n");
 										}
 										else{
 											PF = 0;	
@@ -650,9 +650,9 @@ int main() {
 		                        
 								//Si carga mal los datos otra vez el burro
 								if (puntos_procesos<0 || puntos_procesos>30){
-									printf("Error: El puntaje del Examen Final no es válido. Por favor, ingrese un valor en un rango del 1 al 20\n");
+									printf("Error: El puntaje del Examen Final no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 20\n");
 									//Le notificamos que vuelva a ingresar
-									printf("Atención:¡Por favor, vuelva a ingresar su puntaje del Examen Final!\n");
+									printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje del Examen Final!\n");
 									EP3 = 1;
 									//Ya es el colmo
 									while (EP3 == 1){
@@ -660,9 +660,9 @@ int main() {
 		                        		scanf("%d", &puntos_procesos);
 		                        		
 										if (puntos_procesos<0 || puntos_procesos>13){
-											printf("Error: El puntaje del Examen Final no es válido. Por favor, ingrese un valor en un rango del 1 al 20\n");
+											printf("Error: El puntaje del Examen Final no es vÃ¡lido. Por favor, ingrese un valor en un rango del 1 al 20\n");
 											//Le notificamos que vuelva a ingresar
-											printf("Atención:¡Por favor, vuelva a ingresar su puntaje del Examen Final!\n");
+											printf("AtenciÃ³n:Â¡Por favor, vuelva a ingresar su puntaje del Examen Final!\n");
 										}
 										else{
 											EP3 = 0;	
@@ -706,7 +706,7 @@ int main() {
 				        printf("No tienes los puntos necesarios para mantener tu Beca completa 100%%.\n");
 				    }
 				    else{
-				        printf("¡Felicidades, mantuviste tu beca!\n");
+				        printf("Â¡Felicidades, mantuviste tu beca!\n");
 					}
 				} 
 				else if (beneficios == 3) {
@@ -717,7 +717,7 @@ int main() {
 				        printf("No tienes los puntos necesarios para mantener tu Media Beca 50%%.\n");
 				    }
 				    else{
-				       	printf("¡Felicidades, mantuviste tu beca!");
+				       	printf("Â¡Felicidades, mantuviste tu beca!");
 					}
 				} 
 		    }
@@ -727,7 +727,7 @@ int main() {
 		//Por si acaso
 		else {
 		    if (cantidad_materias > 12) {
-		        printf("Error: No puedes ingresar más de 12 materias.\n");
+		        printf("Error: No puedes ingresar mÃ¡s de 12 materias.\n");
 				break;
 		    } 
 			else if (cantidad_materias < 1) {
@@ -756,12 +756,12 @@ int main() {
 		           	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 					SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN);
 		               
-			        printf("\nMateria Nº %d:\n", j);
+			        printf("\nMateria NÂº %d:\n", j);
 			        
 			        //Se cambia al predeterminado del sistema...
 					SetConsoleTextAttribute(hConsole, FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 						
-			        printf("Ingrese su calificación (1,2,3,4 o 5):");
+			        printf("Ingrese su calificaciÃ³n (1,2,3,4 o 5):");
 			        scanf("%d", &calificacion);
 					//Si ingreso mal 
 			        if(calificacion < 1 ||calificacion > 5 ){
@@ -776,7 +776,7 @@ int main() {
 			//Por si acaso 
 			else {
 			    if (cantidad_materias > 12) {
-			        printf("Error: No puedes ingresar más de 12 materias.\n");
+			        printf("Error: No puedes ingresar mÃ¡s de 12 materias.\n");
 					break;
 			    } 
 				else if (cantidad_materias < 1) {
@@ -798,7 +798,7 @@ int main() {
 			        printf("No tienes los puntos necesarios para mantener tu Beca completa 100%%.\n");
 			    }
 			    else{
-			        printf("¡Felicidades, mantuviste tu beca\n!");
+			        printf("Â¡Felicidades, mantuviste tu beca\n!");
 				}
 			} 
 			else if(beneficios == 3){
@@ -810,12 +810,12 @@ int main() {
 			    printf("No tienes los puntos necesarios para mantener tu Media Beca 50%%.\n");
 			}
 			else{
-			    printf("¡Felicidades, mantuviste tu beca!\n");
+			    printf("Â¡Felicidades, mantuviste tu beca!\n");
 			}
 		}
 		
 	    printf("\n\n");
-	    printf("¿Desea realizar el cálculo de nuevo? Sí(1)/No(0): ");
+	    printf("Â¿Desea realizar el cÃ¡lculo de nuevo? SÃ­(1)/No(0): ");
 	    scanf("%d", &prog);
 		limpiar();		   
 	}while(prog!=0);
